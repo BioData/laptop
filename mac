@@ -11,11 +11,39 @@ echo "Installing Homebrew, a good OS X package manager ..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
   brew update
 
-echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres --no-python
-
 echo "Installing Redis, a good key-value database ..."
   brew install redis
+
+echo "Installing MongoDB ..."
+  brew install mongodb
+
+echo "Installing MySQL ..."
+  brew install mysql
+
+echo "Installing MySQL ..."
+  brew install bash-completion
+
+echo "Installing Git + gitflow ..."
+  brew install git
+  brew install git-flow
+
+echo "Installing Jasper ..."
+  brew install jasper
+
+echo "Installing Jpeg ..."
+  brew install jpeg
+
+echo "Installing Libtiff ..."
+  brew install libtiff
+
+echo "Installing MacVim ..."
+  brew install macvim
+
+echo "Installing ReadLine ..."
+  brew install readline
+
+echo "Installing Wget ..."
+  brew install wget
 
 echo "Installing ack, a good way to search through files ..."
   brew install ack
