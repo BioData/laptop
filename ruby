@@ -16,8 +16,8 @@ echo "Installing the Taps gem to push and pull SQL databases between development
 
 echo "Creating and importing to 187-old gemset"
   rvm use 1.8.7-p334@187-old --create
-  rvm gemset import 1.8.7-global.gems 
+#  rvm gemset import 1.8.7-global.gems 
 
 echo "Creating and importing to 192-old gemset"
   rvm use 1.9.2-p290@192-old --create
-  rvm gemset import 1.9.2-global.gems 
+#  rvm gemset import 1.9.2-global.gems 
