@@ -20,27 +20,15 @@ echo "Installing MongoDB ..."
 echo "Installing MySQL ..."
   brew install mysql
 
-echo "Installing MySQL ..."
+echo "Installing bash-completion ..."
   brew install bash-completion
 
 echo "Installing Git + gitflow ..."
   brew install git
   brew install git-flow
 
-echo "Installing Jasper ..."
-  brew install jasper
-
-echo "Installing Jpeg ..."
-  brew install jpeg
-
-echo "Installing Libtiff ..."
-  brew install libtiff
-
 echo "Installing MacVim ..."
   brew install macvim
-
-echo "Installing ReadLine ..."
-  brew install readline
 
 echo "Installing Wget ..."
   brew install wget

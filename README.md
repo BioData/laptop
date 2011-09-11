@@ -40,6 +40,14 @@ What it sets up
 * Rails gem (for writing web applications)
 * Heroku gem (for interacting with the Heroku API)
 * Taps gem (for pushing and pulling SQL databases between environments)
-* Postgres gem (for making Ruby talk to SQL databases)
+* redis
+* mongodb
+* mysql
+* git
+* git-flow
+* macvim
+* wget
+* and much more....
+
 
 It should take about 30 minutes for everything to install, depending on your machine.
