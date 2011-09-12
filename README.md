@@ -6,7 +6,7 @@ Laptop is a set of scripts to get your laptop set up as a development machine.
 Mac OS X
 --------
 
-First, install [GCC for OS X](https://github.com/kennethreitz/osx-gcc-installer). (requires OS X 10.6 or higher)
+First, install [XCode](http://developer.apple.com/xcode).
 
 Then, run this one-liner:
 
