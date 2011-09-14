@@ -14,10 +14,14 @@ echo "Installing the Heroku gem to interact with the http://heroku.com API ..."
 echo "Installing the Taps gem to push and pull SQL databases between development, staging, and production environments ..."
   gem install taps --no-rdoc --no-ri
 
+echo "updating rubygems system"
+  rvm use 1.8.7-p334
+  gem update --system 1.7.2
+
 echo "Creating and importing to 187-old gemset"
-  rvm use 1.8.7-p334@187-old --create
+#  rvm use 1.8.7-p334@187-old --create
 #  rvm gemset import 1.8.7-global.gems 
 
 echo "Creating and importing to 192-old gemset"
-  rvm use 1.9.2-p290@192-old --create
+#  rvm use 1.9.2-p290@192-old --create
 #  rvm gemset import 1.9.2-global.gems 

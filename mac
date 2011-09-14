@@ -19,6 +19,8 @@ echo "Installing MongoDB ..."
 
 echo "Installing MySQL ..."
   brew install mysql
+  unset TMPDIR
+  mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=#{var}/mysql --tmpdir=/tmp
 
 echo "Installing bash-completion ..."
   brew install bash-completion
@@ -51,6 +53,9 @@ echo "Installing tmux, a good way to save project state and switch between proje
 
 echo "Installing ImageMagick, good for cropping and re-sizing images ..."
   brew install imagemagick
+
+echo "Installing ghostscript, for using with imagemagick"
+  brew install ghostscript
 
 echo "Installing RVM (Ruby Version Manager) ..."
   curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer ; chmod +x rvm-installer ; ./rvm-installer --version latest
