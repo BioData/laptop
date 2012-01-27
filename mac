@@ -3,9 +3,9 @@
 echo "Checking for SSH key, generating one if it doesn't exist ..."
   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
-echo "Copying public key to clipboard. Paste it into your Github account ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
-  open https://github.com/account/ssh
+#echo "Copying public key to clipboard. Paste it into your Github account ..."
+#  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
+#  open https://github.com/account/ssh
 
 echo "Installing Homebrew, a good OS X package manager ..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
@@ -16,11 +16,14 @@ echo "Installing Redis, a good key-value database ..."
 
 echo "Installing MongoDB ..."
   brew install mongodb
+  mkdir -p ~/Library/LaunchAgents
+  cp `brew --prefix mysql`/org.mongodb.mongod.plist ~/Library/LaunchAgents/
+  launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 echo "Installing MySQL ..."
   brew install mysql
   unset TMPDIR
-  mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=#{var}/mysql --tmpdir=/tmp
+  mysql_install_db --verbose --user=`whoami` --basedir=`brew --prefix mysql` --datadir=/usr/local/var/mysql --tmpdir=/tmp
 
 echo "Installing bash-completion ..."
   brew install bash-completion
@@ -29,8 +32,8 @@ echo "Installing Git + gitflow ..."
   brew install git
   brew install git-flow
 
-echo "Installing MacVim ..."
-  brew install macvim
+#echo "Installing MacVim ..."
+#  brew install macvim
 
 echo "Installing Wget ..."
   brew install wget
