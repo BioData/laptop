@@ -17,7 +17,7 @@ echo "Installing Redis, a good key-value database ..."
 echo "Installing MongoDB ..."
   brew install mongodb
   mkdir -p ~/Library/LaunchAgents
-  cp `brew --prefix mysql`/org.mongodb.mongod.plist ~/Library/LaunchAgents/
+  cp `brew --prefix mongodb`/org.mongodb.mongod.plist ~/Library/LaunchAgents/
   launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 echo "Installing MySQL ..."
